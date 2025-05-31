@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Туристичні Тури по Південному Бугу</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Comfortaa', cursive;
+    }
+
+    header {
+      background: url('pivdennyi-buh.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .logo {
+      max-width: 120px;
+      margin-bottom: 20px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #91c4a5;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 160px 20px 120px;
+    }
+
+    .highlight {
+      background: linear-gradient(to bottom, white, #b3e6f5);
+    }
+
+    .section-alt {
+      background: linear-gradient(to bottom, white, #91c4a5);
+    }
+
+    .accent {
+      color: #fbb470;
+    }
+
+    .tour {
+      border: 2px solid #91c4a5;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fefcf9;
+    }
+
+    .scroll-gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 100px;
+      padding: 150px;
+      background: linear-gradient(to left, #ffffff, #eed582);
+      scroll-snap-type: x mandatory;
+    }
+
+    .scroll-gallery img {
+      flex: 0 0 auto;
+      width: 350px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #d6a54a;
+      scroll-snap-align: start;
+      transition: transform 0.3s;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .scroll-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #b3e6f5;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .price-table th {
+      background-color: #fbb470;
+      color: white;
+      padding: 12px;
+    }
+
+    .price-table td {
+      background-color: white;
+      padding: 10px;
+      border-top: 2px solid #b3e6f5;
+    }
+
+    .btn {
+      background-color: #fbb470;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    form input,
+    form textarea {
+      display: block;
+      margin-bottom: 10px;
+      padding: 10px;
+      width: 100%;
+      max-width: 500px;
+      font-family: 'Comfortaa', cursive;
+      border: 2px solid #91c4a5;
+      border-radius: 5px;
+    }
+
+    form {
+      background-color: #fefcf9;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+    }
+
+    footer {
+      background-color: #91c4a5;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      h1, h2, h3 {
+        font-size: 1.5em;
+      }
+
+      .scroll-gallery {
+        gap: 50px;
+        padding: 50px;
+      }
+
+      .scroll-gallery img {
+        width: 250px;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">Про нас</a>
+    <a href="#tours">Тури</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#pricing">Ціни</a>
+    <a href="#booking">Бронювання</a>
+    <a href="#contact">Контакти</a>
+  </nav>
+
+  <header>
+    <img src="photo_2025-05-26_11-03-55.jpg" alt="Логотип" class="logo">
+    <h1>Туристичні Тури по Південному Бугу</h1>
+    <p>Відкрийте для себе красу Південноукраїнська!</p>
+  </header>
+
+  <section id="about" class="highlight">
+    <h2>Про нас</h2>
+    <p>Наші тури пропонують незабутній відпочинок по природі Південного Бугу. Незалежно від того, чи шукаєте ви адреналін серед скель, чи прагнете спокійного сімейного дозвілля, у нас є ідеальний варіант для вас.</p>
+    <ul>
+      <li><strong>Активний відпочинок:</strong> маршрути по скелях та островах Південного Бугу.</li>
+      <li><strong>Сімейний відпочинок:</strong> комфортний і безпечний для всієї родини.</li>
+      <li><strong>Триразове харчування:</strong> смачне і збалансоване.</li>
+      <li><strong>Комфортне проживання:</strong> намети, будиночки або номери.</li>
+    </ul>
+  </section>
+
+  <section id="tours" class="section-alt">
+    <h2>Наші Тури</h2>
+    <div class="tour">
+      <h3 class="accent">3-денний тур "Скелі та Спокій"</h3>
+      <p><strong>Активності:</strong> Прогулянки, скелелазіння, вечори біля вогнища.</p>
+    </div>
+    <div class="tour">
+      <h3 class="accent">5-денний тур "Острови Пригод"</h3>
+      <p><strong>Активності:</strong> Каякінг, походи, майстер-класи з виживання.</p>
+    </div>
+    <div class="tour">
+      <h3 class="accent">7-денний тур "Бузькі Краєвиди: Повний Релакс"</h3>
+      <p><strong>Активності:</strong> Трекінг, риболовля, екскурсії, йога.</p>
+    </div>
+  </section>
+
+  <section id="gallery" class="highlight">
+    <h2>Галерея</h2>
+    <div class="scroll-gallery">
+      <img src="IMG_20240730_194037.jpg" alt="Фото 1">
+      <img src="IMG_20250524_205156.jpg" alt="Фото 2">
+      <img src="IMG_20250529_132737_381.jpg" alt="Фото 3">
+      <img src="caa969a53f024e5dc4febf91f25247eb.jpg" alt="Фото 4">
+      <img src="IMG_20250529_132742_964.jpg" alt="Фото 5">
+    </div>
+  </section>
+
+  <section id="pricing" class="highlight">
+    <h2>Ціни</h2>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Тур</th>
+          <th>Тривалість</th>
+          <th>Ціна</th>
+          <th>Включено</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Скелі та Спокій</td>
+          <td>3 дні</td>
+          <td>3000 грн</td>
+          <td>Проживання, харчування, інструктор</td>
+        </tr>
+        <tr>
+          <td>Острови Пригод</td>
+          <td>5 днів</td>
+          <td>5000 грн</td>
+          <td>Проживання, харчування, каякінг, майстер-класи</td>
+        </tr>
+        <tr>
+          <td>Бузькі Краєвиди</td>
+          <td>7 днів</td>
+          <td>7500 грн</td>
+          <td>Проживання, харчування, екскурсії, йога, риболовля</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="booking" class="highlight">
+    <h2>Забронювати тур</h2>
+    <form action="https://formspree.io/f/xnndeyvy" method="POST">
+      <label for="name">Ваше ім’я</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="phone">Номер телефону</label>
+      <input type="tel" name="phone" id="phone" required>
+
+      <label for="email">Ваш Email</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="message">Повідомлення</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Забронювати</button>
+    </form>
+  </section>
+
+  <section id="contact" class="highlight">
+    <h2>Контакти</h2>
+    <p><strong>Адреса:</strong> Південноукраїнськ, Миколаївська область</p>
+    <p><strong>Телефон:</strong> +38 (000) 000-00-00</p>
+    <p><strong>Email:</strong> rusnakd88@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Туристичні тури по Південному Бугу. Всі права захищені.</p>
+  </footer>
+</body>
+</html>
